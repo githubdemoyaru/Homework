@@ -29,14 +29,14 @@ bool isPrimeNumber(int num)
 
 bool isHyperPrimeNumber(int num)
 {
-	do
+	while (num)
 	{
 		if (!isPrimeNumber(num))
 		{
 			return false;
 		}
 		num = num/10;
-	} while (num);
+	} 
 
 	return true;
 }
@@ -52,7 +52,7 @@ int main()
 	{
 		if (isHyperPrimeNumber(i))
 		{
-			c = true
+			c = true;
 			cout << i << " ";
 		}
 	}
